@@ -20,7 +20,7 @@ def open_file():
         input_file.close()
     window.title(f"congials Text Editor - {filepath}")
 def save_file():
-    filepath = asksaveasfilename(defaltextension="txt",
+    filepath = asksaveasfilename(defaultextension="txt",
                                  filetypes=[("Text files", "*.txt"), ("All Files", "*.*")],
 )
     if not filepath:
@@ -31,12 +31,12 @@ def save_file():
         window.title(f"Congials Text Editor - {filepath}")
 txt_edit = Text(window)
 fr_buttons = Frame(window, relief=RAISED, bd=2 ) 
-btn_open = Button(fr_buttons,text="Open", commands=open_file)
+btn_open = Button(fr_buttons,text="Open", command=open_file)
 btn_save = Button(fr_buttons,text="Save As....", command=save_file)
-
+print("please summer break start agian")
 
 btn_open.grid(row=0, column=0, sticky="ew", padx=5, pady=5)
-btn_open.grid(row=0, column=0, sticky="ew", padx=5)
+btn_save.grid(row=0, column=0, sticky="ew", padx=5)
 fr_buttons.grid(row=0, column=0, sticky="ns")
 fr_buttons.grid(row=0, column=1, sticky="nsew")
 window.mainloop()
