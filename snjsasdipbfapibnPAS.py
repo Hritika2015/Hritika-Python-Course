@@ -13,7 +13,7 @@ def open_file():
     )
     if not filepath:
         return
-    txt_edit.delete(1.0, e=END)
+    txt_edit.delete(1.0, END)
     with open(filepath,"r") as input_file:
         text = input_file.read()
         txt_edit.insert(END,text)
@@ -28,7 +28,7 @@ def save_file():
     with open(filepath, "w") as output_file:
         text = txt_edit.get(1.0, END)
         output_file.write(text)
-        window.title(f"conglials Text Editor - {filepath}")
+        window.title(f"Congials Text Editor - {filepath}")
 txt_edit = Text(window)
 fr_buttons = Frame(window, relief=RAISED, bd=2 ) 
 btn_open = Button(fr_buttons,text="Open", commands=open_file)
